@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+	<title>
+		Jerry's Shining Living Dex
+	</title>
+	<body>
+		<hl>
+			Hello World
+		</hl>
+		<p>
+			I'm hosted with GitHub Pages.
+		</p>
+	</body>
 </html>
