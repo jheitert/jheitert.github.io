@@ -4,24 +4,32 @@
 	<title>Jerry's Shiny Living Dex</title>
 	<link rel="stylesheet" href="style.css">
 </head>
+
+	<!-- Tab links -->
+	<div class="tab">
+    	<button class="tablinks" onclick="openCity(event, 'Setup')">Setup</button>
+    </div>
+<div id="Setup" class="tabcontent">
 <form>
-	<fieldset>
-		<legend>Select your shiny hunting method:</legend>
-		<div>
-			<input type="radio" id="choice1" name="method" value="modern" />
-			<label for="choice1">Modern: Odds are 1/4096</label>
-			<input type="radio" id="choice2" name="method" value="charm" />
-			<label for="choice2">Charm: Odds are 1/1365</label>
-			<input type="radio" id="choice3" name="method" value="egg" />
-			<label for="choice3">Egg: Odds are 1/512</label>
+      			<fieldset>
+          			<legend>Select your shiny hunting method:</legend>
+          			<div>
+                      <input type="radio" id="choice1" name="method" value="modern" />
+                      <label for="choice1">Modern: Odds are 1/4096</label>
+                      <input type="radio" id="choice2" name="method" value="charm" />
+                      <label for="choice2">Charm: Odds are 1/1365</label>
+                      <input type="radio" id="choice3" name="method" value="egg" />
+                      <label for="choice3">Masuda: Odds are 1/512</label>
+                      <input type="radio" id="choice4" name="method" value="egg" />
+                      <label for="choice4">SOS: Odds are 1/273</label>
+					</div>
+      			</fieldset>
+  			</form>
+</div>
 			
-		</div>
-	</fieldset>
-</form>
 <body>
 	<label id="countLabel">0</label><br>
-	<pre>B(n,p)</pre>
-	<label id="formulaLabel">00.00</label><br>
+	<pre>B(n,p)</pre><label id="formulaLabel">00.00</label><br>
 	
 	<div id="btnContainer">
 		<button id="decreaseBtn">decrease</button>
