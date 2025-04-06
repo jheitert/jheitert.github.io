@@ -23,18 +23,18 @@ resetBtn.onclick = function(){
 
 function openCounter(evt, Counter) {
   // Declare all variables
-  var i, tabcontent, tablinks;
+  var i, counterContent, counterlinks;
 
   // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+  counterContent = document.getElementsByClassName("counterContent");
+  for (i = 0; i < counterContent.length; i++) {
+    counterContent[i].style.display = "none";
   }
 
   // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
+  counterlinks = document.getElementsByClassName("counterlinks");
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+    counterlinks[i].className = counterlinks[i].className.replace(" active", "");
   }
 
   // Show the current tab, and add an "active" class to the button that opened the tab
@@ -44,21 +44,21 @@ function openCounter(evt, Counter) {
 
 function openSetup(evt, Setup) {
   // Declare all variables
-  var i, tabcontent, tablinks;
+  var i, setupContent, setuplinks;
 
   // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+  tabcontent = document.getElementsByClassName("setupContent");
+  for (i = 0; i < setupContent.length; i++) {
+    setupContent[i].style.display = "none";
   }
 
   // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  setuplinks = document.getElementsByClassName("setuplinks");
+  for (i = 0; i < setuplinks.length; i++) {
+    setuplinks[i].className = setuplinks[i].className.replace(" active", "");
   }
 
   // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(setup).style.display = "block";
   evt.currentTarget.className += " active";
 } 
