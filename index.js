@@ -24,7 +24,7 @@ function openTab(evt, tabName) {
   }
 }
 
-function createGrid(rows = 10, cols = 10) {
+function createGrid(rows = 16, cols = 10) {
   const container = document.getElementById("gridContainer");
   container.innerHTML = ""; // clear old grid
 
