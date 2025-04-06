@@ -2,25 +2,26 @@
 document.getElementById("defaultOpen").click();
 
 function openTab(evt, tabName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
+  const tabcontent = document.getElementsByClassName("tabcontent");
+  const tablinks = document.getElementsByClassName("tablinks");
 
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
+  for (let i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
 
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
+  for (let i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
 
-  // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
-} 
+
+  // Only build grid if Grid tab is opened
+  if (tabName === "Grid") {
+    createGrid();
+  }
+}
+
 
 //counter portion
 
@@ -44,6 +45,41 @@ resetBtn.onclick = function(){
   count = 0;
   countLabel.textContent = count;
 }
+
+function createGrid(rows = 10, cols = 10) {
+  const container = document.getElementById("gridContainer");
+  container.innerHTML = ""; // clear old grid
+
+  // Load saved state from localStorage
+  const savedState = JSON.parse(localStorage.getItem("gridState") || "{}");
+
+  for (let i = 0; i < rows * cols; i++) {
+    const cell = document.createElement("div");
+    cell.classList.add("grid-cell");
+    cell.textContent = i + 1;
+    cell.dataset.cellId = i;
+
+    // Restore saved color
+    if (savedState[i]) {
+      cell.style.backgroundColor = "gold";
+    }
+
+    cell.addEventListener("click", () => {
+      const isActive = cell.style.backgroundColor === "gold";
+      if (isActive) {
+        cell.style.backgroundColor = "lightgray";
+        delete savedState[i];
+      } else {
+        cell.style.backgroundColor = "gold";
+        savedState[i] = true;
+      }
+      localStorage.setItem("gridState", JSON.stringify(savedState));
+    });
+
+    container.appendChild(cell);
+  }
+}
+
 
 
 
