@@ -4,48 +4,48 @@
 	<title>Jerry's Shiny Living Dex</title>
 	<link rel="stylesheet" href="style.css">
 </head>
-
-<!-- Tab links -->
-<div class="tab">
-	<button class="tablinks" onclick="openTab(event, 'Counter')" id="defaultOpen" >Counter</button>
-	<button class="tablinks" onclick="openTab(event, 'Setup')">Setup</button>
-	
-<!-- Main Tab -->
-<div id="Counter" class="tabcontent">
-
 <body>
-	<label id="countLabel">0</label><br>
-	<pre>B(n,p)</pre><label id="formulaLabel">00.00</label><br>
-	
-	<div id="btnContainer" class="tabcontent">
-		<button id="decreaseBtn">decrease</button>
-		<button id="increaseBtn">increase</button>
-		<button id="resetBtn">reset</button>
+
+	<!-- Tab links -->
+	<div class="tab">
+		<button class="tablinks" onclick="openTab(event, 'Counter')" id="defaultOpen">Counter</button>
+		<button class="tablinks" onclick="openTab(event, 'Setup')">Setup</button>
 	</div>
+
+	<!-- Main Tab -->
+	<div id="Counter" class="tabcontent">
+		<label id="countLabel">0</label><br>
+		<pre>B(n,p)</pre><label id="formulaLabel">00.00</label><br>
 		
+		<div id="btnContainer">
+			<button id="decreaseBtn">decrease</button>
+			<button id="increaseBtn">increase</button>
+			<button id="resetBtn">reset</button>
+		</div>
+	</div>
+
+	<!-- Setup Tab -->
+	<div id="Setup" class="tabcontent">
+		<form>
+			<fieldset>
+				<legend>Select your shiny hunting method:</legend>
+				<div>
+					<input type="radio" id="choice1" name="method" value="modern" />
+					<label for="choice1">Modern: Odds are 1/4096</label><br>
+					
+					<input type="radio" id="choice2" name="method" value="charm" />
+					<label for="choice2">Charm: Odds are 1/1365</label><br>
+					
+					<input type="radio" id="choice3" name="method" value="egg" />
+					<label for="choice3">Masuda: Odds are 1/512</label><br>
+					
+					<input type="radio" id="choice4" name="method" value="sos" />
+					<label for="choice4">SOS: Odds are 1/273</label>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+
 	<script src="index.js"></script>
 </body>
-
-</div>
-<!-- Setup Tab -->
-<div id="Setup" class="tabcontent">
-<form>
-	<fieldset>
-        	<legend>Select your shiny hunting method:</legend>
-          	<div>
-                      <input type="radio" id="choice1" name="method" class="tabcontent" value="modern" />
-                      <label for="choice1">Modern: Odds are 1/4096</label>
-                      <input type="radio" id="choice2" name="method" class="tabcontent" value="charm" />
-                      <label for="choice2">Charm: Odds are 1/1365</label>
-                      <input type="radio" id="choice3" name="method" class="tabcontent" value="egg" />
-                      <label for="choice3">Masuda: Odds are 1/512</label>
-                      <input type="radio" id="choice4" name="method" class="tabcontent" value="egg" />
-                      <label for="choice4">SOS: Odds are 1/273</label>
-		</div>
-      	</fieldset>
-</form>
-</div>
-
-
-
 </html>
