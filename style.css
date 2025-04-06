@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: dodgerblue;
+  padding: 10px;
+}
+.container > div {
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
 
+<div class="container">
+  <div>Bulbasaur</div>
+  <div>Ivysaur</div>
+  <div>Venusaur</div>  
+  <div>Charmander</div>
+  <div>Charmeleon</div>
+  <div>Charizard</div>  
+  <div>Squirtle</div>
+  <div>Wartortle</div>
+  <div>Blastoise</div>
+</div>
+
+</body>
+</html>
