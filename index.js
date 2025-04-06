@@ -21,7 +21,7 @@ resetBtn.onclick = function(){
   countLabel.textContent = count;
 }
 
-function openSetup(evt, cityName) {
+function openSetup(evt, Setup) {
   // Declare all variables
   var i, tabcontent, tablinks;
 
