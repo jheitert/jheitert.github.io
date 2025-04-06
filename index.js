@@ -1,5 +1,7 @@
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+window.onload = function () {
+  document.getElementById("defaultOpen").click();
+};
 
 function openTab(evt, tabName) {
   const tabcontent = document.getElementsByClassName("tabcontent");
@@ -17,7 +19,7 @@ function openTab(evt, tabName) {
   evt.currentTarget.className += " active";
 
   // Only build grid if Grid tab is opened
-  if (tabName === "Grid") {
+  if (tabName === "Collection") {
     createGrid();
   }
 }
