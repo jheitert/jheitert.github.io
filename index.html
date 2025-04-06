@@ -5,11 +5,14 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 
-
+<!-- Tab links -->
+<div class="tab">
+	<button class="counterlinks" onclick="openCounter(event, 'Counter')">Counter</button>
+	<button class="setuplinks" onclick="openSetup(event, 'Setup')">Setup</button>
+	
 <!-- Main Tab -->
-<button class="tablinks" onclick="openCounter(event, 'Counter')" id="defaultOpen">Counter</button>
+<div id="Counter" class="counterContent">
 
-<script>
 <body>
 	<label id="countLabel">0</label><br>
 	<pre>B(n,p)</pre><label id="formulaLabel">00.00</label><br>
@@ -22,13 +25,7 @@
 		
 	<script src="index.js"></script>
 </body>
-</script> 
 
-
-	
-<!-- Tab links -->
-<div class="tab">
-	<button class="setuplinks" onclick="openSetup(event, 'Setup')">Setup</button>
 </div>
 <!-- Setup Tab -->
 <div id="Setup" class="setupContent">
