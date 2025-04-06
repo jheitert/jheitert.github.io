@@ -21,10 +21,8 @@ resetBtn.onclick = function(){
   countLabel.textContent = count;
 }
 
-<script>
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
-</script>
 
 function openTab(evt, tabName) {
   // Declare all variables
