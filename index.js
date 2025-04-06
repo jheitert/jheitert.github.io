@@ -21,28 +21,7 @@ resetBtn.onclick = function(){
   countLabel.textContent = count;
 }
 
-function openCounter(evt, Counter) {
-  // Declare all variables
-  var i, counterContent, counterlinks;
-
-  // Get all elements with class="tabcontent" and hide them
-  counterContent = document.getElementsByClassName("counterContent");
-  for (i = 0; i < counterContent.length; i++) {
-    counterContent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  counterlinks = document.getElementsByClassName("counterlinks");
-  for (i = 0; i < tablinks.length; i++) {
-    counterlinks[i].className = counterlinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(Counter).style.display = "block";
-  evt.currentTarget.className += " active";
-} 
-
-function openSetup(evt, Setup) {
+function openTab(evt, Setup) {
   // Declare all variables
   var i, setupContent, setuplinks;
 
