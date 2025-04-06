@@ -5,7 +5,11 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 
+
 <!-- Main Tab -->
+<button class="tablinks" onclick="openCounter(event, 'Counter')" id="defaultOpen">Counter</button>
+
+<script>
 <body>
 	<label id="countLabel">0</label><br>
 	<pre>B(n,p)</pre><label id="formulaLabel">00.00</label><br>
@@ -18,6 +22,11 @@
 		
 	<script src="index.js"></script>
 </body>
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script> 
+
+
 	
 <!-- Tab links -->
 <div class="tab">
